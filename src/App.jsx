@@ -111,7 +111,7 @@ function ValueBetsPanel() {
   );
 }
 
-#Mike Added News Feed
+//Mike Added News Feed
 
 
 function NewsFeed() {
@@ -182,7 +182,7 @@ function ChatbotWidget() {
   );
 }
 
-#Mike added Styles to website
+//Mike added Styles to website
 /* ----------------------- Styles ----------------------- */
 const styles = {
   app: {

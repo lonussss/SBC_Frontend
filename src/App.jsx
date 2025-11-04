@@ -145,4 +145,39 @@ function NewsFeed() {
     </section>
   );
 }
+/* ----------------------- Chatbot Widget ----------------------- */
+function ChatbotWidget() {
+  const [messages, setMessages] = useState([
+    { role: "bot", text: "Hey! Ask me about value bets, odds, or fixtures for World Cup 2026." },
+  ]);
+  const [input, setInput] = useState("");
 
+  const send = () => {
+    const trimmed = input.trim();
+    if (!trimmed) return;
+    setMessages(prev => [...prev, { role: "user", text: trimmed }, { role: "bot", text: "Got it — (demo): running query…" }]);
+    setInput("");
+  };
+
+  return (
+    <div style={styles.chatbot} aria-label="Chatbot">
+      <div style={styles.chatHeader}>SBC Chatbot</div>
+      <div style={styles.chatBody}>
+        {messages.map((m, i) => (
+          <div key={i} style={{ ...styles.chatMsg, ...(m.role === "user" ? styles.msgUser : styles.msgBot) }}>
+            {m.text}
+          </div>
+        ))}
+      </div>
+      <div style={styles.chatInputRow}>
+        <input
+          value={input}
+          onChange={e => setInput(e.target.value)}
+          placeholder="Ask about a match, market, or line…"
+          style={styles.chatInput}
+        />
+        <button onClick={send} style={styles.chatSend}>Send</button>
+      </div>
+    </div>
+  );
+}

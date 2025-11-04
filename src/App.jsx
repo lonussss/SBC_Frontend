@@ -181,3 +181,158 @@ function ChatbotWidget() {
     </div>
   );
 }
+
+#Mike added Styles to website
+/* ----------------------- Styles ----------------------- */
+const styles = {
+  app: {
+    fontFamily: "Inter, system-ui, Arial, sans-serif",
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    background: "#f6f7fb",
+  },
+  header: {
+    backgroundColor: "#0b1020",
+    color: "white",
+    padding: "12px 20px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    position: "sticky",
+    top: 0,
+    zIndex: 10,
+  },
+  brand: { fontWeight: 700, letterSpacing: 0.4 },
+  nav: { display: "flex", gap: 12 },
+  link: { color: "white", textDecoration: "none", fontWeight: 600 },
+  signup: { padding: "6px 10px", background: "#1ea97c", borderRadius: 6 },
+
+  sectionLabel: { margin: "0 0 8px 0", fontSize: 14, color: "#222" },
+  gamesBar: {
+    background: "white",
+    padding: "10px 16px",
+    borderBottom: "1px solid #e6e7ee",
+  },
+  gamesScroller: {
+    display: "grid",
+    gridAutoFlow: "column",
+    gridAutoColumns: "minmax(220px, 1fr)",
+    gap: 12,
+    overflowX: "auto",
+    paddingBottom: 8,
+  },
+  gameChip: {
+    border: "1px solid #e6e7ee",
+    borderRadius: 10,
+    padding: "10px 12px",
+    background: "#fafbff",
+  },
+  gameTeams: { fontWeight: 700, marginBottom: 4 },
+  gameMeta: { fontSize: 12, color: "#555" },
+
+  main: {
+  flex: 1,
+  display: "grid",
+  gridTemplateColumns: "380px 1fr",  // Wider sidebar
+  gap: 16,
+  padding: 16,
+},
+
+sidebar: {
+  background: "white",
+  border: "1px solid #e6e7ee",
+  borderRadius: 12,
+  padding: 12,
+  height: "fit-content",
+  overflowX: "auto",  // Scroll if still needed
+},
+  sidebarTitle: { margin: "0 0 10px", fontSize: 16, fontWeight: 700,},
+  table: {
+    width: "100%",
+    borderCollapse: "collapse",
+    fontSize: 13,
+  },
+  th: { textAlign: "left", padding: "8px 6px", borderBottom: "1px solid #eee" },
+  td: { padding: "8px 6px", borderBottom: "1px solid #f3f4f7" },
+  row: { background: "white" },
+
+  /* News */
+  newsSection: {
+    background: "white",
+    border: "1px solid #e6e7ee",
+    borderRadius: 12,
+    padding: 16,
+    minHeight: 420,
+  },
+  newsCard: {
+    background: "#fbfcff",
+    border: "1px solid #edf0f7",
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 12,
+    boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
+  },
+
+  /* Chatbot */
+  chatbot: {
+    position: "fixed",
+    right: 18,
+    bottom: 18,
+    width: 340,
+    maxWidth: "90vw",
+    background: "white",
+    border: "1px solid #e6e7ee",
+    borderRadius: 14,
+    boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
+    display: "flex",
+    flexDirection: "column",
+    overflow: "hidden",
+    zIndex: 20,
+  },
+  chatHeader: {
+    background: "#0b1020",
+    color: "white",
+    padding: "10px 12px",
+    fontWeight: 700,
+    fontSize: 14,
+  },
+  chatBody: {
+    padding: 12,
+    height: 220,
+    overflowY: "auto",
+    background: "#f7f8fc",
+  },
+  chatMsg: {
+    padding: "8px 10px",
+    borderRadius: 8,
+    marginBottom: 8,
+    maxWidth: "85%",
+    lineHeight: 1.3,
+    fontSize: 13,
+  },
+  msgUser: { background: "#dff7ee", marginLeft: "auto" },
+  msgBot: { background: "white", border: "1px solid #edf0f7" },
+  chatInputRow: { display: "flex", gap: 8, padding: 10, borderTop: "1px solid #edf0f7" },
+  chatInput: {
+    flex: 1,
+    border: "1px solid #d9dce6",
+    borderRadius: 8,
+    padding: "8px 10px",
+    outline: "none",
+  },
+  chatSend: {
+    border: "none",
+    background: "#1ea97c",
+    color: "white",
+    fontWeight: 700,
+    padding: "8px 12px",
+    borderRadius: 8,
+    cursor: "pointer",
+  },
+
+  /* Responsive */
+  "@media (max-width: 900px)": {},
+};
+
+export default App;
